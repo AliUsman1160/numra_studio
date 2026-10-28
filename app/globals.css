@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+@theme {
+  --color-plum: #44243d;
+  --color-plum-deep: #33192e;
+  --color-ivory: #faf7f2;
+  --color-blush: #e8cdd1;
+  --color-blush-soft: #f3e5e7;
+  --color-gold: #c1a16a;
+  --color-gold-dark: #8a6d3b;
+  --color-espresso: #302824;
+  --color-taupe: #a79a91;
+  --color-taupe-dark: #6f625a;
+
+  --font-serif: var(--font-cormorant), "Cormorant Garamond", Georgia, serif;
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+
+  --shadow-soft: 0 18px 50px -24px rgb(68 36 61 / 0.35);
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: var(--color-ivory);
+  color: var(--color-espresso);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--color-blush);
+  color: var(--color-plum);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.eyebrow {
+  font-size: 0.72rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
